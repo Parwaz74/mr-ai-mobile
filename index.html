@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#062b35"><meta name="description" content="M.R AI — independent creative intelligence prototype">
+<link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="style.css">
+<title>M.R AI — Independent Intelligence</title>
+</head>
+<body>
+<header class="top">
+  <div class="brand-wrap"><img class="brand-logo" src="assets/mr-ai-logo.png" alt="M.R AI logo"><div><div class="brand">M.R <span>AI</span></div><small id="tagline">مغز مستقل خلاق — نسخه آزمایشی ۰٫۴</small></div></div>
+  <button class="lang" id="langBtn">EN</button>
+</header>
+<main>
+<section class="hero">
+  <div class="orb">MR</div><div><div class="eyebrow" id="eyebrow">هسته تصمیم‌گیری محلی فعال است</div>
+  <h1 id="title">از ایده تا برنامه اجرایی</h1><p id="intro">این نمونه بدون اتصال به سرویس هوش مصنوعی خارجی، درخواست شما را با قوانین داخلی تحلیل و به مراحل قابل اجرا تبدیل می‌کند.</p></div>
+</section>
+<nav class="tabs">
+<button class="tab active" data-tab="brain" id="tabBrain">مغز هوشمند</button>
+<button class="tab" data-tab="characters" id="tabChars">شناسنامه شخصیت</button>
+<button class="tab" data-tab="saved" id="tabSaved">پروژه‌های ذخیره‌شده</button>
+</nav>
+<section id="brain" class="panel active">
+  <label id="requestLabel" for="request">ایده یا درخواست خود را بنویسید</label><label id="characterSelectLabel" for="characterSelect">شخصیت ذخیره‌شده (اختیاری)</label><select id="characterSelect"><option value="">بدون شخصیت ثابت</option></select>
+  <textarea id="request" rows="4" placeholder="مثلاً: یک ویدئوی سینمایی از شخصیت ثابت من در ساحل بساز..."></textarea>
+  <div class="row">
+    <select id="kind" aria-label="نوع پروژه">
+      <option value="auto">تشخیص خودکار نوع پروژه</option><option value="image">تصویر</option><option value="video">ویدئو</option><option value="music">موسیقی</option><option value="character">طراحی شخصیت</option><option value="general">برنامه‌ریزی عمومی</option>
+    </select>
+    <button class="primary" id="analyze">تحلیل و تصمیم‌گیری</button>
+  </div>
+  <div id="result" class="result empty"><div class="emptyicon">✦</div><p id="emptyText">پس از تحلیل، تصمیم‌ها و مراحل پیشنهادی مغز M.R AI اینجا نمایش داده می‌شود.</p></div>
+  <button id="saveProject" class="secondary hidden">ذخیره این پروژه</button>
+  <p class="notice" id="localNote">تمام داده‌ها فعلاً فقط روی همین دستگاه ذخیره می‌شوند. این موتور، نمونه قانون‌محور است و هنوز مدل زبانی آموزش‌دیده نیست.</p>
+</section>
+<section id="characters" class="panel">
+  <h2 id="charTitle">حافظه شخصیت‌ها</h2><p class="muted" id="charIntro">ویژگی‌های ثابت شخصیت را ثبت کنید تا در پروژه‌های بعدی قابل استفاده باشد.</p>
+  <label id="nameLabel">نام شخصیت</label><input id="charName" placeholder="مثلاً Samira">
+  <label id="descLabel">ویژگی‌های ثابت و مورد تأیید</label><textarea id="charDesc" rows="3" placeholder="چهره، مو، لباس پایه، لحن، ویژگی‌های غیرقابل تغییر..."></textarea>
+  <button class="primary full" id="addChar">ذخیره شخصیت</button>
+  <div id="charList" class="cards"></div>
+</section>
+<section id="saved" class="panel">
+  <h2 id="savedTitle">پروژه‌های ذخیره‌شده</h2><div id="projectList" class="cards"></div>
+  <button class="secondary full" id="exportData">خروجی پشتیبان اطلاعات (JSON)</button>
+</section>
+</main>
+<footer><span>M.R AI</span><span id="footerText">نسخه آزمایشی محلی • بدون اتصال خارجی</span></footer>
+<script src="app.js"></script>
+</body></html>
