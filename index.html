@@ -2,50 +2,56 @@
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#062b35"><meta name="description" content="M.R AI — independent creative intelligence prototype">
+<meta name="theme-color" content="#062d35"><meta name="description" content="M.R AI mobile-first independent local assistant prototype">
 <link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="style.css">
-<title>M.R AI — Independent Intelligence</title>
+<title>M.R AI — نسخه ۰٫۵</title>
 </head>
 <body>
 <header class="top">
-  <div class="brand-wrap"><img class="brand-logo" src="assets/mr-ai-logo.png" alt="M.R AI logo"><div><div class="brand">M.R <span>AI</span></div><small id="tagline">مغز مستقل خلاق — نسخه آزمایشی ۰٫۴</small></div></div>
-  <button class="lang" id="langBtn">EN</button>
+  <img src="assets/mr-ai-logo.png" alt="M.R AI" onerror="this.style.display='none'">
+  <div><b>M.R AI</b><small data-i18n="tag">هسته هوشمند مستقل • نمونه موبایلی</small></div>
+  <button id="langBtn" class="ghost">EN</button>
 </header>
-<main>
-<section class="hero">
-  <div class="orb">MR</div><div><div class="eyebrow" id="eyebrow">هسته تصمیم‌گیری محلی فعال است</div>
-  <h1 id="title">از ایده تا برنامه اجرایی</h1><p id="intro">این نمونه بدون اتصال به سرویس هوش مصنوعی خارجی، درخواست شما را با قوانین داخلی تحلیل و به مراحل قابل اجرا تبدیل می‌کند.</p></div>
-</section>
 <nav class="tabs">
-<button class="tab active" data-tab="brain" id="tabBrain">مغز هوشمند</button>
-<button class="tab" data-tab="characters" id="tabChars">شناسنامه شخصیت</button>
-<button class="tab" data-tab="saved" id="tabSaved">پروژه‌های ذخیره‌شده</button>
+ <button class="tab active" data-view="chat" data-i18n="chat">گفت‌وگو</button>
+ <button class="tab" data-view="memory" data-i18n="memory">حافظه</button>
+ <button class="tab" data-view="projects" data-i18n="projects">پروژه‌ها</button>
+ <button class="tab" data-view="tools" data-i18n="tools">ابزارها</button>
 </nav>
-<section id="brain" class="panel active">
-  <label id="requestLabel" for="request">ایده یا درخواست خود را بنویسید</label><label id="characterSelectLabel" for="characterSelect">شخصیت ذخیره‌شده (اختیاری)</label><select id="characterSelect"><option value="">بدون شخصیت ثابت</option></select>
-  <textarea id="request" rows="4" placeholder="مثلاً: یک ویدئوی سینمایی از شخصیت ثابت من در ساحل بساز..."></textarea>
-  <div class="row">
-    <select id="kind" aria-label="نوع پروژه">
-      <option value="auto">تشخیص خودکار نوع پروژه</option><option value="image">تصویر</option><option value="video">ویدئو</option><option value="music">موسیقی</option><option value="character">طراحی شخصیت</option><option value="general">برنامه‌ریزی عمومی</option>
-    </select>
-    <button class="primary" id="analyze">تحلیل و تصمیم‌گیری</button>
-  </div>
-  <div id="result" class="result empty"><div class="emptyicon">✦</div><p id="emptyText">پس از تحلیل، تصمیم‌ها و مراحل پیشنهادی مغز M.R AI اینجا نمایش داده می‌شود.</p></div>
-  <button id="saveProject" class="secondary hidden">ذخیره این پروژه</button>
-  <p class="notice" id="localNote">تمام داده‌ها فعلاً فقط روی همین دستگاه ذخیره می‌شوند. این موتور، نمونه قانون‌محور است و هنوز مدل زبانی آموزش‌دیده نیست.</p>
+<main>
+<section id="chat" class="view active">
+ <div class="hero"><span class="pulse"></span><div><h1 data-i18n="hello">سلام، من M.R AI هستم</h1><p data-i18n="intro">در این نسخه، پردازش محلی، حافظه و مدیریت وظایف را آزمایش می‌کنیم.</p></div></div>
+ <div id="messages" class="messages" aria-live="polite"></div>
+ <div class="chips">
+  <button data-prompt="برای پروژه من یک برنامه مرحله‌ای بساز">برنامه‌ریزی</button>
+  <button data-prompt="این ایده را تحلیل کن و مزایا و محدودیت‌ها را بگو">تحلیل ایده</button>
+  <button data-prompt="یک پرامپت حرفه‌ای برای تولید تصویر بنویس">ساخت پرامپت</button>
+ </div>
+ <form id="chatForm" class="composer"><textarea id="userInput" rows="2" placeholder="درخواست خود را بنویسید…" required></textarea><button type="submit">➤</button></form>
+ <p class="hint" data-i18n="localNote">پردازش این نمونه روی دستگاه انجام می‌شود؛ پاسخ‌ها هنوز در حد موتور محلی قانون‌محور هستند.</p>
 </section>
-<section id="characters" class="panel">
-  <h2 id="charTitle">حافظه شخصیت‌ها</h2><p class="muted" id="charIntro">ویژگی‌های ثابت شخصیت را ثبت کنید تا در پروژه‌های بعدی قابل استفاده باشد.</p>
-  <label id="nameLabel">نام شخصیت</label><input id="charName" placeholder="مثلاً Samira">
-  <label id="descLabel">ویژگی‌های ثابت و مورد تأیید</label><textarea id="charDesc" rows="3" placeholder="چهره، مو، لباس پایه، لحن، ویژگی‌های غیرقابل تغییر..."></textarea>
-  <button class="primary full" id="addChar">ذخیره شخصیت</button>
-  <div id="charList" class="cards"></div>
+<section id="memory" class="view">
+ <h2 data-i18n="memoryTitle">حافظه محلی</h2><p class="muted" data-i18n="memoryDesc">یادداشت‌هایی که خودتان ذخیره می‌کنید، فقط در همین مرورگر نگهداری می‌شوند.</p>
+ <form id="memoryForm" class="panel"><input id="memoryTitleInput" placeholder="عنوان"><textarea id="memoryBodyInput" placeholder="متن یادداشت"></textarea><button class="primary">ذخیره در حافظه</button></form>
+ <div id="memoryList"></div>
 </section>
-<section id="saved" class="panel">
-  <h2 id="savedTitle">پروژه‌های ذخیره‌شده</h2><div id="projectList" class="cards"></div>
-  <button class="secondary full" id="exportData">خروجی پشتیبان اطلاعات (JSON)</button>
+<section id="projects" class="view">
+ <h2 data-i18n="projectsTitle">مدیریت پروژه‌ها</h2>
+ <form id="projectForm" class="panel"><input id="projectName" placeholder="نام پروژه" required><textarea id="projectDesc" placeholder="هدف و توضیح پروژه"></textarea><button class="primary">ایجاد پروژه</button></form>
+ <div id="projectList"></div>
+</section>
+<section id="tools" class="view">
+ <h2 data-i18n="toolsTitle">ابزارهای هسته</h2>
+ <div class="grid">
+  <button class="tool" data-tool="plan"><b>▤</b><span>برنامه‌ریز مراحل</span></button>
+  <button class="tool" data-tool="prompt"><b>✧</b><span>معمار پرامپت</span></button>
+  <button class="tool" data-tool="analyze"><b>⌕</b><span>تحلیل درخواست</span></button>
+  <button class="tool" data-tool="export"><b>⇩</b><span>پشتیبان‌گیری</span></button>
+ </div>
+ <div class="panel notice"><b>وضعیت هسته</b><p>حافظه محلی: فعال</p><p>موتور تحلیل و مسیریابی: فعال (قانون‌محور)</p><p>مدل زبانی آموزش‌دیده مستقل: هنوز پیاده‌سازی نشده</p><p>اتصال به سرویس خارجی: غیرفعال</p></div>
+ <label class="panel import">بازیابی نسخه پشتیبان JSON <input id="importFile" type="file" accept="application/json"></label>
 </section>
 </main>
-<footer><span>M.R AI</span><span id="footerText">نسخه آزمایشی محلی • بدون اتصال خارجی</span></footer>
+<footer>M.R AI • Mobile Prototype 0.5</footer>
 <script src="app.js"></script>
 </body></html>
