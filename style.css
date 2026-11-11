@@ -8,3 +8,11 @@ main{max-width:760px;margin:auto;padding:12px}.view{display:none}.view.active{di
 h2{font-size:20px}.panel{display:block;background:var(--card);border:1px solid var(--line);border-radius:17px;padding:14px;margin:12px 0}.panel input,.panel textarea{display:block;width:100%;margin:0 0 10px;padding:12px;border-radius:11px;border:1px solid var(--line);background:#082832;color:var(--text);font:inherit}.panel textarea{min-height:80px}.primary{background:var(--mint);color:#062d35;border:0;padding:11px 16px;border-radius:11px;font-weight:750}.entry{background:var(--card);border:1px solid var(--line);padding:13px;border-radius:14px;margin:9px 0}.entry p{color:var(--muted);white-space:pre-wrap;line-height:1.6}.entry button{background:transparent;border:1px solid var(--line);color:var(--muted);padding:6px 10px;border-radius:9px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.tool{background:var(--card);border:1px solid var(--line);color:var(--text);border-radius:16px;padding:18px;display:flex;gap:12px;align-items:center;text-align:start}.tool b{font-size:24px;color:var(--gold)}.notice p{color:var(--muted);margin:8px 0}.import{color:var(--muted)}footer{text-align:center;color:#759b9b;font-size:11px;padding:18px}
 body[dir="ltr"] .msg.user{align-self:flex-end}body[dir="ltr"] .msg.ai{align-self:flex-start}
 @media(min-width:650px){main{padding:20px}.messages{min-height:260px}.composer textarea{min-height:45px}}
+#languageSelect{max-width:132px;padding:9px;border:1px solid #3a7778;border-radius:12px;background:#0d4148;color:#fff}
+.media-grid{grid-template-columns:repeat(3,minmax(0,1fr));margin:14px 0}
+.panel label{display:block;font-weight:600;margin:10px 0 6px}
+.panel textarea,.panel select{width:100%;margin:6px 0 12px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.row{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.prompt-output{white-space:pre-wrap;overflow-wrap:anywhere;direction:ltr;text-align:left;font-size:13px;line-height:1.55;background:#082f36;color:#e7f7f3;padding:13px;border-radius:12px;max-height:360px;overflow:auto}
+@media(max-width:430px){.tabs{overflow-x:auto}.tabs button{white-space:nowrap}.two{grid-template-columns:1fr}.media-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}

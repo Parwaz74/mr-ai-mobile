@@ -1,57 +1,8 @@
-<!doctype html>
-<html lang="fa" dir="rtl">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#062d35"><meta name="description" content="M.R AI mobile-first independent local assistant prototype">
-<link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="style.css">
-<title>M.R AI — نسخه ۰٫۶</title>
-</head>
-<body>
-<header class="top">
-  <img src="assets/mr-ai-logo.png" alt="M.R AI" onerror="this.style.display='none'">
-  <div><b>M.R AI</b><small data-i18n="tag">هسته هوشمند مستقل • نمونه موبایلی</small></div>
-  <button id="langBtn" class="ghost">EN</button>
-</header>
-<nav class="tabs">
- <button class="tab active" data-view="chat" data-i18n="chat">گفت‌وگو</button>
- <button class="tab" data-view="memory" data-i18n="memory">حافظه</button>
- <button class="tab" data-view="projects" data-i18n="projects">پروژه‌ها</button>
- <button class="tab" data-view="tools" data-i18n="tools">ابزارها</button>
-</nav>
-<main>
-<section id="chat" class="view active">
- <div class="hero"><span class="pulse"></span><div><h1 data-i18n="hello">سلام، من M.R AI هستم</h1><p data-i18n="intro">در این نسخه، پردازش محلی، حافظه و مدیریت وظایف را آزمایش می‌کنیم.</p></div></div>
- <div id="messages" class="messages" aria-live="polite"></div>
- <div class="chips">
-  <button data-prompt="برای پروژه من یک برنامه مرحله‌ای بساز">برنامه‌ریزی</button>
-  <button data-prompt="این ایده را تحلیل کن و مزایا و محدودیت‌ها را بگو">تحلیل ایده</button>
-  <button data-prompt="یک پرامپت حرفه‌ای برای تولید تصویر بنویس">ساخت پرامپت</button>
- </div>
- <form id="chatForm" class="composer"><textarea id="userInput" rows="2" placeholder="درخواست خود را بنویسید…" required></textarea><button type="submit">➤</button></form>
- <p class="hint" data-i18n="localNote">پردازش این نمونه روی دستگاه انجام می‌شود؛ پاسخ‌ها هنوز در حد موتور محلی قانون‌محور هستند.</p>
-</section>
-<section id="memory" class="view">
- <h2 data-i18n="memoryTitle">حافظه محلی</h2><p class="muted" data-i18n="memoryDesc">یادداشت‌هایی که خودتان ذخیره می‌کنید، فقط در همین مرورگر نگهداری می‌شوند.</p>
- <form id="memoryForm" class="panel"><input id="memoryTitleInput" placeholder="عنوان"><textarea id="memoryBodyInput" placeholder="متن یادداشت"></textarea><button class="primary">ذخیره در حافظه</button></form>
- <div id="memoryList"></div>
-</section>
-<section id="projects" class="view">
- <h2 data-i18n="projectsTitle">مدیریت پروژه‌ها</h2>
- <form id="projectForm" class="panel"><input id="projectName" placeholder="نام پروژه" required><textarea id="projectDesc" placeholder="هدف و توضیح پروژه"></textarea><button class="primary">ایجاد پروژه</button></form>
- <div id="projectList"></div>
-</section>
-<section id="tools" class="view">
- <h2 data-i18n="toolsTitle">ابزارهای هسته</h2>
- <div class="grid">
-  <button class="tool" data-tool="plan"><b>▤</b><span>برنامه‌ریز مراحل</span></button>
-  <button class="tool" data-tool="prompt"><b>✧</b><span>معمار پرامپت</span></button>
-  <button class="tool" data-tool="analyze"><b>⌕</b><span>تحلیل درخواست</span></button>
-  <button class="tool" data-tool="export"><b>⇩</b><span>پشتیبان‌گیری</span></button>
- </div>
- <div class="panel notice"><b>وضعیت هسته</b><p>حافظه محلی: فعال</p><p>موتور تحلیل و تولید ساختاریافته: فعال (قانون‌محور)</p><p>مدل زبانی آموزش‌دیده مستقل: هنوز پیاده‌سازی نشده</p><p>اتصال به سرویس خارجی: غیرفعال</p></div>
- <label class="panel import">بازیابی نسخه پشتیبان JSON <input id="importFile" type="file" accept="application/json"></label>
-</section>
-</main>
-<footer>M.R AI • Mobile Prototype 0.6</footer>
-<script src="app.js"></script>
-</body></html>
+<!doctype html><html lang="fa" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#062d35"><meta name="description" content="M.R AI multilingual creative studio prototype"><link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="style.css"><title>M.R AI — نسخه ۰٫۷</title></head><body>
+<header class="top"><img src="assets/mr-ai-logo.png" alt="M.R AI" onerror="this.style.display='none'"><div><b>M.R AI</b><small data-i18n="tag">هسته هوشمند و استودیوی خلاقانه</small></div><select id="languageSelect" aria-label="Language"></select></header>
+<nav class="tabs"><button class="tab active" data-view="chat" data-i18n="chat">گفت‌وگو</button><button class="tab" data-view="studio" data-i18n="studio">استودیوی خلاقانه</button><button class="tab" data-view="memory" data-i18n="memory">حافظه</button><button class="tab" data-view="projects" data-i18n="projects">پروژه‌ها</button><button class="tab" data-view="tools" data-i18n="tools">ابزارها</button></nav><main>
+<section id="chat" class="view active"><div class="hero"><span class="pulse"></span><div><h1 data-i18n="hello">سلام، من M.R AI هستم</h1><p data-i18n="intro">دستیار محلی برای تحلیل، برنامه‌ریزی و طراحی محتوای چندرسانه‌ای.</p></div></div><div id="messages" class="messages" aria-live="polite"></div><div class="chips"><button data-prompt="برای پروژه من یک برنامه مرحله‌ای بساز" data-i18n="planChip">برنامه‌ریزی</button><button data-prompt="این ایده را تحلیل کن و مزایا و محدودیت‌ها را بگو" data-i18n="analyzeChip">تحلیل ایده</button><button data-prompt="یک پرامپت حرفه‌ای برای تولید تصویر بنویس" data-i18n="promptChip">ساخت پرامپت</button></div><form id="chatForm" class="composer"><textarea id="userInput" rows="2" data-i18n-placeholder="writeRequest" placeholder="درخواست خود را بنویسید…" required></textarea><button type="submit">➤</button></form><p class="hint" data-i18n="localNote">این نسخه از موتور محلی قانون‌محور استفاده می‌کند؛ مدل زبانی مستقل متصل نیست.</p></section>
+<section id="studio" class="view"><h2 data-i18n="studioTitle">استودیوی تولید محتوا</h2><p class="muted" data-i18n="studioIntro">گردش‌کار و پرامپت‌ساز رسانه‌ای آماده است؛ موتور تولید فایل هنوز متصل نیست.</p><div class="grid media-grid"><button class="tool" data-media="image"><b>▧</b><span data-i18n="imageTool">استودیوی تصویر</span></button><button class="tool" data-media="video"><b>▶</b><span data-i18n="videoTool">استودیوی ویدئو</span></button><button class="tool" data-media="audio"><b>♫</b><span data-i18n="audioTool">استودیوی صدا و موسیقی</span></button></div><form id="mediaForm" class="panel"><label data-i18n="mediaSubject">موضوع یا ایده</label><textarea id="mediaSubject" required placeholder="Describe your creative idea…"></textarea><div class="two"><label><span data-i18n="styleLabel">سبک</span><select id="mediaStyle"><option value="realistic">Realistic / واقع‌گرا</option><option value="cinematic">Cinematic / سینمایی</option><option value="minimal">Minimal / مینیمال</option><option value="asmr">ASMR</option><option value="illustrated">Illustrated / هنری</option></select></label><label><span data-i18n="formatLabel">قالب خروجی</span><select id="mediaFormat"><option value="youtube">YouTube 16:9</option><option value="shorts">Shorts 9:16</option><option value="square">Square 1:1</option></select></label></div><label data-i18n="detailsLabel">جزئیات و محدودیت‌ها</label><textarea id="mediaDetails" placeholder="Duration, movement, lighting, exclusions…"></textarea><button class="primary" type="submit" data-i18n="buildPrompt">ساخت پرامپت رسانه‌ای</button></form><div class="panel"><div class="row"><b data-i18n="promptResult">پرامپت آماده</b><button id="copyMediaPrompt" class="ghost" type="button" data-i18n="copy">کپی</button></div><pre id="mediaPrompt" class="prompt-output" data-i18n="promptPlaceholder">پس از تکمیل فرم، پرامپت اینجا نمایش داده می‌شود.</pre></div><div class="panel notice"><b data-i18n="engineStatus">وضعیت موتورهای رسانه‌ای</b><p data-i18n="imageStatus">تولید تصویر: موتور واقعی هنوز متصل نشده</p><p data-i18n="videoStatus">تولید ویدئو: موتور واقعی هنوز متصل نشده</p><p data-i18n="audioStatus">تولید صدا و موسیقی: موتور واقعی هنوز متصل نشده</p><p data-i18n="localMediaNote">این ابزار فعلاً پرامپت تولید می‌کند؛ فایل رسانه‌ای تولید نمی‌کند.</p></div></section>
+<section id="memory" class="view"><h2 data-i18n="memoryTitle">حافظه محلی</h2><p class="muted" data-i18n="memoryDesc">یادداشت‌ها فقط در همین مرورگر نگهداری می‌شوند.</p><form id="memoryForm" class="panel"><input id="memoryTitleInput" placeholder="عنوان"><textarea id="memoryBodyInput" placeholder="متن یادداشت"></textarea><button class="primary" data-i18n="saveMemory">ذخیره در حافظه</button></form><div id="memoryList"></div></section>
+<section id="projects" class="view"><h2 data-i18n="projectsTitle">مدیریت پروژه‌ها</h2><form id="projectForm" class="panel"><input id="projectName" placeholder="نام پروژه" required><textarea id="projectDesc" placeholder="هدف و توضیح پروژه"></textarea><button class="primary" data-i18n="createProject">ایجاد پروژه</button></form><div id="projectList"></div></section>
+<section id="tools" class="view"><h2 data-i18n="toolsTitle">ابزارهای هسته</h2><div class="grid"><button class="tool" data-tool="plan"><b>▤</b><span data-i18n="planner">برنامه‌ریز مراحل</span></button><button class="tool" data-tool="prompt"><b>✧</b><span data-i18n="architect">معمار پرامپت</span></button><button class="tool" data-tool="analyze"><b>⌕</b><span data-i18n="analysis">تحلیل درخواست</span></button><button class="tool" data-tool="export"><b>⇩</b><span data-i18n="backup">پشتیبان‌گیری</span></button></div><div class="panel notice"><b data-i18n="coreStatus">وضعیت هسته</b><p data-i18n="memoryActive">حافظه محلی: فعال</p><p data-i18n="ruleEngine">موتور ساختاریافته: فعال (قانون‌محور)</p><p data-i18n="modelMissing">مدل زبانی مستقل: هنوز پیاده‌سازی نشده</p><p data-i18n="mediaMissing">موتورهای واقعی تولید رسانه: هنوز متصل نشده‌اند</p></div><label class="panel import"><span data-i18n="restore">بازیابی نسخه پشتیبان JSON</span><input id="importFile" type="file" accept="application/json"></label></section></main><footer>M.R AI • Mobile Prototype 0.7</footer><script src="app.js"></script></body></html>
