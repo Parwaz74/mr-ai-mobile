@@ -1,0 +1,5 @@
+M.R AI 0.10.6 — internal review candidate
+
+Changes: optional local reference-image upload to ComfyUI; separate image-to-image workflow using LoadImage + VAEEncode; upload limited to PNG/JPEG/WebP and 8 MB; image is forwarded to local ComfyUI only.
+
+Limitations: reference workflow requires a compatible checkpoint and a configured workflow path. Image-to-image variation does not guarantee exact identity preservation. Real GPU inference has not been verified. Video reference-image conditioning is not implemented.

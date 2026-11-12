@@ -1,0 +1,34 @@
+M.R AI 0.9.7 — Internal QA report
+
+Implemented in this increment:
+- Added stable IDs to projects and memory notes during state migration, without deleting user-authored fields.
+- Legacy note-to-project links are migrated to projectId only when exactly one project has the matching legacy name; ambiguous matches are deliberately left unlinked rather than guessed.
+- New projects and notes receive stable IDs at creation.
+- New note links use project IDs instead of project names, so identical project names no longer cause new links to collide.
+- Replaced sequential browser prompt dialogs with an in-page memory editor for title, body, category and linked project.
+- Added a visible category filter control (the previous code referenced a filter element that was missing from the page markup).
+- Backup schema version advanced to 10; legacy fields and records remain preserved.
+- Service-worker cache name updated to 0.9.7.
+
+Validation performed:
+- node --check app.js — passed.
+- node --check ai-client.js — passed.
+- node --check server.mjs — passed.
+- node --test tests/*.test.cjs — 13 tests passed.
+- Manifest JSON parse — passed.
+- ZIP integrity check — passed.
+- 39 configured language identifiers retained.
+
+Not tested / not complete:
+- Full browser interaction and Android device UI testing.
+- Cloud sync or multi-device persistence.
+- Full translation of all 39 interfaces.
+- Live independent language model connection (apiEnabled remains false).
+- Production voice, image, video or audio generation integrations.
+- Production authentication and distributed rate limiting.
+
+Data migration safety:
+- Existing localStorage keys remain unchanged.
+- Legacy records are not discarded.
+- Duplicate exact records are deduplicated before IDs are assigned during legacy-store migration.
+- When legacy project names are ambiguous, no project link is inferred.

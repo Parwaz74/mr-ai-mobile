@@ -1,0 +1,24 @@
+M.R AI 0.9.9 — Internal QA report
+
+Implemented in this increment:
+- Task priority (low / medium / high) on creation.
+- Optional due date on task creation.
+- Overdue detection for incomplete tasks with a due date earlier than the local calendar date.
+- Per-project task filters: all, pending, completed, overdue.
+- Per-project counts for completed and overdue tasks.
+- Backward-compatible task normalization: legacy tasks receive a stable ID, medium priority and an empty due date.
+- Backup schema version advanced to 12; existing project and task records are retained.
+
+Automated checks:
+- JavaScript syntax checks: passed.
+- Node test suite: 20 tests passed (see TEST_RESULTS_0_9_9.txt).
+- Manifest JSON parse: passed.
+- ZIP integrity: passed after packaging.
+
+Known limitations:
+- No push/local notification reminders are implemented.
+- Due dates are calendar dates; no timezone-specific time-of-day scheduling.
+- No cloud sync or multi-device task synchronization.
+- Live LLM provider connection has not been configured or tested.
+- Full 39-language UI translation is incomplete.
+- Android device/browser acceptance testing has not been performed.

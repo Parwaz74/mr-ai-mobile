@@ -1,0 +1,24 @@
+M.R AI 0.9.3 — Internal QA report
+
+Passed:
+- node --check app.js
+- node --check ai-client.js
+- node --check server.mjs
+- node --test tests/*.test.cjs: 8/8 passed
+- Existing storage migration and backup regression tests: 6/6 passed
+- Proxy origin/content-type and unconfigured-provider tests passed
+- 39 language identifiers retained
+- assets/mr-ai-logo.png and icons/icon-192.png, icons/icon-512.png present
+- Manifest JSON parsed successfully
+
+Changes:
+- Explicitly labels local rule-based fallback when remote model is unavailable.
+- Bounds browser history sent to the proxy.
+- Bounds server-side history and periodically prunes stale rate-limit entries.
+
+Not tested / not complete:
+- No live provider call; no API key configured; apiEnabled remains false.
+- No Android device test.
+- Complete 39-language UI translations are not present.
+- No independent voice service or media-generation provider is connected.
+- Production authentication and distributed rate limiting are not implemented.

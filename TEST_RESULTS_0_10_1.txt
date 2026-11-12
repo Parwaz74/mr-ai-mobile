@@ -1,0 +1,170 @@
+TAP version 13
+# Subtest: proxy reports unconfigured state and rejects model requests without a secret
+ok 1 - proxy reports unconfigured state and rejects model requests without a secret
+  ---
+  duration_ms: 124.641952
+  type: 'test'
+  ...
+# Subtest: creates a stable-shape reminder notification with task priority and unread state
+ok 2 - creates a stable-shape reminder notification with task priority and unread state
+  ---
+  duration_ms: 1.31582
+  type: 'test'
+  ...
+# Subtest: defaults invalid notification priority to medium
+ok 3 - defaults invalid notification priority to medium
+  ---
+  duration_ms: 0.223776
+  type: 'test'
+  ...
+# Subtest: notification filters support all, unread and priority
+ok 4 - notification filters support all, unread and priority
+  ---
+  duration_ms: 0.218151
+  type: 'test'
+  ...
+# Subtest: project search matches name and description case-insensitively
+ok 5 - project search matches name and description case-insensitively
+  ---
+  duration_ms: 1.215759
+  type: 'test'
+  ...
+# Subtest: project statistics count only notes linked by stable project ID
+ok 6 - project statistics count only notes linked by stable project ID
+  ---
+  duration_ms: 0.789211
+  type: 'test'
+  ...
+# Subtest: renaming a project updates denormalized names without changing stable links
+ok 7 - renaming a project updates denormalized names without changing stable links
+  ---
+  duration_ms: 1.319866
+  type: 'test'
+  ...
+# Subtest: proxy enforces configured origin and JSON content type
+ok 8 - proxy enforces configured origin and JSON content type
+  ---
+  duration_ms: 127.612167
+  type: 'test'
+  ...
+# Stored data could not be read: SyntaxError: Expected property name or '}' in JSON at position 1 (line 1 column 2)
+#     at JSON.parse (<anonymous>)
+#     at Object.readState (evalmachine.<anonymous>:16:136)
+#     at TestContext.<anonymous> (/mnt/data/mr1001_work/MR_AI_0_10_1/tests/storage-regression.test.cjs:31:24)
+#     at Test.runInAsyncScope (node:async_hooks:214:14)
+#     at Test.run (node:internal/test_runner/test:1047:25)
+#     at Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+#     at Test.postRun (node:internal/test_runner/test:1173:19)
+#     at Test.run (node:internal/test_runner/test:1101:12)
+#     at async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+# Subtest: merges v0.6 and legacy v0.5 records without losing metadata
+ok 9 - merges v0.6 and legacy v0.5 records without losing metadata
+  ---
+  duration_ms: 5.118714
+  type: 'test'
+  ...
+# Subtest: deduplicates identical records during migration
+ok 10 - deduplicates identical records during migration
+  ---
+  duration_ms: 0.858571
+  type: 'test'
+  ...
+# Subtest: ignores malformed legacy JSON while retaining valid primary data
+ok 11 - ignores malformed legacy JSON while retaining valid primary data
+  ---
+  duration_ms: 1.871325
+  type: 'test'
+  ...
+# Subtest: normalizes missing collections without discarding extra fields
+ok 12 - normalizes missing collections without discarding extra fields
+  ---
+  duration_ms: 1.20222
+  type: 'test'
+  ...
+# Subtest: backup merge preserves unknown fields from both sources and current values win
+ok 13 - backup merge preserves unknown fields from both sources and current values win
+  ---
+  duration_ms: 1.172878
+  type: 'test'
+  ...
+# Subtest: backup merge does not mutate either input object
+ok 14 - backup merge does not mutate either input object
+  ---
+  duration_ms: 1.197533
+  type: 'test'
+  ...
+# Subtest: preserves project tasks through normalization and backup merge
+ok 15 - preserves project tasks through normalization and backup merge
+  ---
+  duration_ms: 2.453227
+  type: 'test'
+  ...
+# Subtest: memory search matches title and body case-insensitively and normalizes Unicode
+ok 16 - memory search matches title and body case-insensitively and normalizes Unicode
+  ---
+  duration_ms: 0.909312
+  type: 'test'
+  ...
+# Subtest: memory search includes category and linked project, and category filter is exact
+ok 17 - memory search includes category and linked project, and category filter is exact
+  ---
+  duration_ms: 1.102018
+  type: 'test'
+  ...
+# Subtest: assigns stable IDs to legacy projects and notes and migrates unambiguous project links
+ok 18 - assigns stable IDs to legacy projects and notes and migrates unambiguous project links
+  ---
+  duration_ms: 1.225754
+  type: 'test'
+  ...
+# Subtest: does not guess a project link when legacy project names are ambiguous
+ok 19 - does not guess a project link when legacy project names are ambiguous
+  ---
+  duration_ms: 0.812074
+  type: 'test'
+  ...
+# Subtest: notification history survives normalization and backup merge
+ok 20 - notification history survives normalization and backup merge
+  ---
+  duration_ms: 0.786238
+  type: 'test'
+  ...
+# Subtest: overdue excludes completed tasks and tasks without due dates
+ok 21 - overdue excludes completed tasks and tasks without due dates
+  ---
+  duration_ms: 0.925918
+  type: 'test'
+  ...
+# Subtest: task filters return the expected task groups
+ok 22 - task filters return the expected task groups
+  ---
+  duration_ms: 0.997204
+  type: 'test'
+  ...
+# Subtest: task statistics count completion and overdue records
+ok 23 - task statistics count completion and overdue records
+  ---
+  duration_ms: 0.449843
+  type: 'test'
+  ...
+# Subtest: local date key uses the device calendar date rather than UTC date
+ok 24 - local date key uses the device calendar date rather than UTC date
+  ---
+  duration_ms: 0.505164
+  type: 'test'
+  ...
+# Subtest: due reminders include only due, pending, not-yet-notified tasks
+ok 25 - due reminders include only due, pending, not-yet-notified tasks
+  ---
+  duration_ms: 0.371661
+  type: 'test'
+  ...
+1..25
+# tests 25
+# suites 0
+# pass 25
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 663.251734

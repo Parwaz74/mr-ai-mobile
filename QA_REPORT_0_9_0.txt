@@ -1,0 +1,15 @@
+M.R AI 0.9.0 — Internal QA report
+
+PASS: node --check app.js
+PASS: node --check server.mjs
+PASS: node --test tests/*.test.cjs (7 tests passed)
+PASS: voice input/output controls and handlers present in source
+PASS: 39 speech locale mappings present
+PASS: storage regression tests retained
+PASS: assets and icons retained from prior internal package
+
+NOT VERIFIED: actual microphone permission, speech recognition accuracy, speech synthesis voice availability, and UI behavior on a physical Android device. Browser speech APIs vary by browser, OS, locale, and network.
+NOT IMPLEMENTED: independent language model, always-on real-time voice conversation, complete 39-language UI translations, image/video/audio generation engines.
+Remote model config remains disabled. No API key or provider account is configured.
+
+This is an internal voice-beta candidate, not a production release. Do not replace the live GitHub Pages deployment without device testing and a verified backup.

@@ -1,0 +1,10 @@
+M.R AI 0.10.3 test results
+
+Command: node --test tests/*.test.cjs
+Result: 37 tests passed, 0 failed.
+
+Syntax checks: node --check app.js, media-studio.js, ai-client.js, server.mjs — passed.
+
+The malformed-storage warning printed by the storage regression test is expected: that test deliberately supplies invalid legacy JSON to verify recovery.
+
+Not tested: live calls to image/speech provider (no API key or deployed server available); real Android camera/microphone; actual 39-language voice quality; AI music/video.

@@ -1,0 +1,16 @@
+M.R AI 0.10.5 — Internal review candidate
+
+Scope:
+- Added a self-hosted ComfyUI bridge for image and video workflows.
+- Added server-side queue submission, job polling, output metadata collection, and safe output-file proxying.
+- Added local image generation UI flow and local video generation UI flow.
+- Added an example image API workflow and a video workflow placeholder with setup documentation.
+- Existing local storage schema, project data, memory data, assets, and icons are retained.
+
+Important limitations:
+- No ComfyUI instance or model weights are bundled.
+- The image workflow checkpoint name must be changed to a model actually installed on the host.
+- The video workflow must be exported in ComfyUI API format for the selected installed model; there is no universal video workflow graph.
+- Live image/video generation has not been tested because no ComfyUI host/model/GPU is configured in this environment.
+- Model license, GPU memory, generation speed, resolution, and clip length vary by model and hardware.
+- This is not a final release and not an Android APK.

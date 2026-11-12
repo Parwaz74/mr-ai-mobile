@@ -1,0 +1,5 @@
+M.R AI 0.10.0 — Internal QA
+
+Added optional browser notifications for task reminders. Reminders are checked on page load and every 30 seconds while the page is active. Browser notification permission is requested only after a user click. A reminder is marked as notified after successful Notification construction to avoid repeated alerts.
+
+Limitations: no guaranteed background delivery; no OS-level scheduling; no push server; no Android device test; browser support and permission vary.

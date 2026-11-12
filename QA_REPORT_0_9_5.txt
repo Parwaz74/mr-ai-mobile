@@ -1,0 +1,23 @@
+M.R AI 0.9.5 — Internal QA report
+
+Implemented in this step:
+- Search local memory notes by title or body text.
+- Search is case-insensitive and applies Unicode NFKC normalization.
+- Shows matching count and a localized empty state.
+- Search filters the visible list only; it does not modify or delete stored records.
+- Search controls and labels are localized in English, Persian and Arabic.
+- Existing memory records, projects, tasks, archive data and backup schema remain unchanged.
+
+Validation performed:
+- JavaScript syntax checks for app.js, ai-client.js and server.mjs.
+- Automated test suite, including new memory-search behavior tests.
+- Manifest JSON parse and ZIP integrity check.
+- Static check that all 39 configured language identifiers remain present.
+
+Not tested / not complete:
+- Full browser interaction and Android device UI testing.
+- Cloud sync or multi-device persistence.
+- Full translation of all 39 languages.
+- Live independent language model connection (apiEnabled remains false).
+- Production voice, image, video or audio generation integrations.
+- Production authentication and distributed rate limiting.

@@ -1,0 +1,140 @@
+TAP version 13
+# Subtest: proxy reports unconfigured state and rejects model requests without a secret
+ok 1 - proxy reports unconfigured state and rejects model requests without a secret
+  ---
+  duration_ms: 128.526565
+  type: 'test'
+  ...
+# Subtest: project search matches name and description case-insensitively
+ok 2 - project search matches name and description case-insensitively
+  ---
+  duration_ms: 0.966156
+  type: 'test'
+  ...
+# Subtest: project statistics count only notes linked by stable project ID
+ok 3 - project statistics count only notes linked by stable project ID
+  ---
+  duration_ms: 1.007175
+  type: 'test'
+  ...
+# Subtest: renaming a project updates denormalized names without changing stable links
+ok 4 - renaming a project updates denormalized names without changing stable links
+  ---
+  duration_ms: 0.211024
+  type: 'test'
+  ...
+# Subtest: proxy enforces configured origin and JSON content type
+ok 5 - proxy enforces configured origin and JSON content type
+  ---
+  duration_ms: 231.408593
+  type: 'test'
+  ...
+# Stored data could not be read: SyntaxError: Expected property name or '}' in JSON at position 1 (line 1 column 2)
+#     at JSON.parse (<anonymous>)
+#     at Object.readState (evalmachine.<anonymous>:15:136)
+#     at TestContext.<anonymous> (/mnt/data/mr099_work/MR_AI_0_9_8/tests/storage-regression.test.cjs:31:24)
+#     at Test.runInAsyncScope (node:async_hooks:214:14)
+#     at Test.run (node:internal/test_runner/test:1047:25)
+#     at Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+#     at Test.postRun (node:internal/test_runner/test:1173:19)
+#     at Test.run (node:internal/test_runner/test:1101:12)
+#     at async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+# Subtest: merges v0.6 and legacy v0.5 records without losing metadata
+ok 6 - merges v0.6 and legacy v0.5 records without losing metadata
+  ---
+  duration_ms: 3.782155
+  type: 'test'
+  ...
+# Subtest: deduplicates identical records during migration
+ok 7 - deduplicates identical records during migration
+  ---
+  duration_ms: 0.953349
+  type: 'test'
+  ...
+# Subtest: ignores malformed legacy JSON while retaining valid primary data
+ok 8 - ignores malformed legacy JSON while retaining valid primary data
+  ---
+  duration_ms: 2.133618
+  type: 'test'
+  ...
+# Subtest: normalizes missing collections without discarding extra fields
+ok 9 - normalizes missing collections without discarding extra fields
+  ---
+  duration_ms: 1.320309
+  type: 'test'
+  ...
+# Subtest: backup merge preserves unknown fields from both sources and current values win
+ok 10 - backup merge preserves unknown fields from both sources and current values win
+  ---
+  duration_ms: 1.145646
+  type: 'test'
+  ...
+# Subtest: backup merge does not mutate either input object
+ok 11 - backup merge does not mutate either input object
+  ---
+  duration_ms: 0.722438
+  type: 'test'
+  ...
+# Subtest: preserves project tasks through normalization and backup merge
+ok 12 - preserves project tasks through normalization and backup merge
+  ---
+  duration_ms: 0.804751
+  type: 'test'
+  ...
+# Subtest: memory search matches title and body case-insensitively and normalizes Unicode
+ok 13 - memory search matches title and body case-insensitively and normalizes Unicode
+  ---
+  duration_ms: 0.896703
+  type: 'test'
+  ...
+# Subtest: memory search includes category and linked project, and category filter is exact
+ok 14 - memory search includes category and linked project, and category filter is exact
+  ---
+  duration_ms: 5.706969
+  type: 'test'
+  ...
+# Subtest: assigns stable IDs to legacy projects and notes and migrates unambiguous project links
+ok 15 - assigns stable IDs to legacy projects and notes and migrates unambiguous project links
+  ---
+  duration_ms: 2.404663
+  type: 'test'
+  ...
+# Subtest: does not guess a project link when legacy project names are ambiguous
+ok 16 - does not guess a project link when legacy project names are ambiguous
+  ---
+  duration_ms: 0.886788
+  type: 'test'
+  ...
+# Subtest: overdue excludes completed tasks and tasks without due dates
+ok 17 - overdue excludes completed tasks and tasks without due dates
+  ---
+  duration_ms: 1.386156
+  type: 'test'
+  ...
+# Subtest: task filters return the expected task groups
+ok 18 - task filters return the expected task groups
+  ---
+  duration_ms: 2.95792
+  type: 'test'
+  ...
+# Subtest: task statistics count completion and overdue records
+ok 19 - task statistics count completion and overdue records
+  ---
+  duration_ms: 0.29623
+  type: 'test'
+  ...
+# Subtest: local date key uses the device calendar date rather than UTC date
+ok 20 - local date key uses the device calendar date rather than UTC date
+  ---
+  duration_ms: 5.52308
+  type: 'test'
+  ...
+1..20
+# tests 20
+# suites 0
+# pass 20
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 783.537916

@@ -1,0 +1,26 @@
+M.R AI — Internal review candidate 0.8.8
+
+Changes:
+- Backup merge preserves forward-compatible unknown metadata from both current state and imported backup.
+- Current browser values take precedence for conflicting top-level metadata.
+- Record collections are merged and exact duplicate records are filtered.
+- Merge function does not mutate its input objects.
+- Backup export filename updated to v0.8.8.
+
+Verified locally:
+- node --check app.js
+- Six Node.js storage regression tests passed.
+- Manifest JSON parsed successfully.
+- HTML IDs are unique.
+- Local asset and icon references exist.
+- Both supplied JSON backups parse and contain expected top-level collections.
+- ZIP integrity check passed.
+
+Not verified / not implemented:
+- Complete translations for all 39 languages (only en/fa/ar dictionaries exist).
+- Independent language model or backend connection.
+- Two-way voice assistant.
+- Actual image/video/audio generation engines.
+- Real Android browser/PWA installation and offline operation.
+
+Internal review candidate only. Do not deploy over the live repository until complete device testing and user-approved deployment.

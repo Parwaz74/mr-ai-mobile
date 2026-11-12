@@ -1,0 +1,20 @@
+M.R AI 0.10.7 — mobile-first internal review candidate
+
+Changes:
+- Added Android PWA install affordance using beforeinstallprompt and appinstalled events.
+- Added persistent mobile onboarding note with install guidance and a warning to export backups before clearing browser data.
+- Tightened header sizing for small mobile screens.
+- Updated service worker cache to 0.10.7 and arranged cleanup of the immediately previous 0.10.6 cache.
+- Added MOBILE_START_FA.md with honest separation between mobile-testable functions and server/hardware-dependent functions.
+
+Verification:
+- JavaScript syntax checks passed.
+- Automated Node.js tests: 49/49 passed.
+- No Android device/browser end-to-end test was performed in this environment.
+- No GitHub Pages deployment was performed.
+
+Limitations remain:
+- Rule-based assistant, not a standalone LLM.
+- Browser-local storage only; no cloud sync.
+- Real ComfyUI image/video generation requires a separately running compatible host and installed model.
+- AI music/TTS generation requires a configured server/provider; browser speech is not equivalent to generated downloadable audio.

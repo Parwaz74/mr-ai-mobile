@@ -1,0 +1,20 @@
+M.R AI 0.9.1 — internal review notes
+
+Changes in this increment:
+- Added a visible, accessible notice when a selected language has no complete UI translation.
+- Kept the 39-language selector and the English fallback behavior. Full translations remain available only for English, Persian and Arabic.
+- Improved voice recognition status messages for empty recognition and recognition completion.
+- Voice recognition remains manual: recognized text is placed in the composer and is never submitted automatically.
+- Updated displayed build version and backup filename.
+
+Validation to run:
+  node --check app.js
+  node --check server.mjs
+  node --test tests/*.test.cjs
+
+Limitations:
+- No Android device/browser microphone test was performed in this environment.
+- Browser speech recognition and speech synthesis availability varies by browser, OS and locale.
+- No live model provider is configured; config.js keeps apiEnabled false.
+- Full translation of all 39 languages is not complete.
+- No real image, video or music generation engine is connected.

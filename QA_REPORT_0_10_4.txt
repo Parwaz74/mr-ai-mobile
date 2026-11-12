@@ -1,0 +1,27 @@
+M.R AI — Internal QA Report 0.10.4
+Date: 2026-11-12
+
+Scope
+- Added a dedicated music-generation workbench to the existing media studio.
+- Added a server-side Stability AI Stable Audio adapter at POST /api/media/music.
+- Added prompt validation, 15/30-second duration allowlist, bounded output size, audio content-type validation, preview and download controls.
+- Music readiness is reported independently by GET /health and uses STABILITY_API_KEY, separate from LLM_API_KEY.
+- Updated Service Worker cache version to v0.10.4.
+- Preserved existing app storage, assets, icons, and all 39 language identifiers.
+
+Automated checks
+- JavaScript syntax checks: passed (app.js, media-studio.js, ai-client.js, server.mjs).
+- Node automated tests: 40 passed, 0 failed.
+- Manifest JSON parse: passed.
+- ZIP integrity: passed.
+
+Important limitations
+- Live music generation was NOT tested because no Stability API key or provider account was available in this environment.
+- Image and TTS live provider calls were not tested either.
+- No Android device/browser hardware test was performed.
+- The music feature currently requests instrumental or general audio output; it does not guarantee a sung vocal, a particular singer, or lyrics in a selected language.
+- Provider usage may incur charges and is subject to the provider's terms and availability. API credentials must be configured by an authorized adult account owner on the server host only; never commit credentials to GitHub or browser files.
+- Video generation, character consistency, multitrack editing, and full 39-language UI localization remain incomplete.
+
+Build classification
+Internal review candidate only. Not a public release, not an APK, and not verified for production deployment.

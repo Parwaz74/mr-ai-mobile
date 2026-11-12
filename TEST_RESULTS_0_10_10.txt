@@ -1,0 +1,386 @@
+TAP version 13
+# Subtest: proxy reports unconfigured state and rejects model requests without a secret
+ok 1 - proxy reports unconfigured state and rejects model requests without a secret
+  ---
+  duration_ms: 124.689604
+  type: 'test'
+  ...
+# Subtest: chat UI provides separate conversation list and new-chat action
+ok 2 - chat UI provides separate conversation list and new-chat action
+  ---
+  duration_ms: 0.660749
+  type: 'test'
+  ...
+# Subtest: chat state migrates legacy flat messages into one preserved conversation
+ok 3 - chat state migrates legacy flat messages into one preserved conversation
+  ---
+  duration_ms: 0.165505
+  type: 'test'
+  ...
+# Subtest: chat messages are stored in active conversation and history is scoped to it
+ok 4 - chat messages are stored in active conversation and history is scoped to it
+  ---
+  duration_ms: 0.169782
+  type: 'test'
+  ...
+# Subtest: chat list supports switching, renaming, deleting and creating conversations
+ok 5 - chat list supports switching, renaming, deleting and creating conversations
+  ---
+  duration_ms: 0.122281
+  type: 'test'
+  ...
+# Subtest: conversation data is included in backup merge
+ok 6 - conversation data is included in backup merge
+  ---
+  duration_ms: 0.10815
+  type: 'test'
+  ...
+# Subtest: conversation mutations use rollback-capable state commits
+ok 7 - conversation mutations use rollback-capable state commits
+  ---
+  duration_ms: 0.29735
+  type: 'test'
+  ...
+# Subtest: legacy flat messages mirror the selected conversation for backward compatibility
+ok 8 - legacy flat messages mirror the selected conversation for backward compatibility
+  ---
+  duration_ms: 0.303719
+  type: 'test'
+  ...
+# Subtest: self-hosted image and video routes are exposed without requiring a vendor image/video API key
+ok 9 - self-hosted image and video routes are exposed without requiring a vendor image/video API key
+  ---
+  duration_ms: 0.826794
+  type: 'test'
+  ...
+# Subtest: studio provides self-hosted image and video generation controls
+ok 10 - studio provides self-hosted image and video generation controls
+  ---
+  duration_ms: 0.469155
+  type: 'test'
+  ...
+# Subtest: workflow placeholder helper preserves numeric JSON types and substitutes prompt text
+ok 11 - workflow placeholder helper preserves numeric JSON types and substitutes prompt text
+  ---
+  duration_ms: 43.853887
+  type: 'test'
+  ...
+# Subtest: ComfyUI output file references reject traversal and accept normal output metadata
+ok 12 - ComfyUI output file references reject traversal and accept normal output metadata
+  ---
+  duration_ms: 30.104004
+  type: 'test'
+  ...
+# Subtest: service worker cache version is bumped for the new media studio UI
+ok 13 - service worker cache version is bumped for the new media studio UI
+  ---
+  duration_ms: 0.316819
+  type: 'test'
+  ...
+# Subtest: reference-image upload endpoint is bounded and uses local ComfyUI upload
+ok 14 - reference-image upload endpoint is bounded and uses local ComfyUI upload
+  ---
+  duration_ms: 0.326163
+  type: 'test'
+  ...
+# Subtest: reference workflow loads and VAE-encodes a selected image
+ok 15 - reference workflow loads and VAE-encodes a selected image
+  ---
+  duration_ms: 0.29684
+  type: 'test'
+  ...
+# Subtest: AI speech generation has a downloadable MP3 control and server request
+ok 16 - AI speech generation has a downloadable MP3 control and server request
+  ---
+  duration_ms: 0.755419
+  type: 'test'
+  ...
+# Subtest: AI image generation has preview and downloadable PNG controls
+ok 17 - AI image generation has preview and downloadable PNG controls
+  ---
+  duration_ms: 0.184584
+  type: 'test'
+  ...
+# Subtest: media provider secrets stay server-side and endpoints validate bounded input
+ok 18 - media provider secrets stay server-side and endpoints validate bounded input
+  ---
+  duration_ms: 0.224953
+  type: 'test'
+  ...
+# Subtest: self-hosted video readiness is reported separately from hosted music provider
+ok 19 - self-hosted video readiness is reported separately from hosted music provider
+  ---
+  duration_ms: 0.105877
+  type: 'test'
+  ...
+# Subtest: media workbench exposes text-to-speech controls
+ok 20 - media workbench exposes text-to-speech controls
+  ---
+  duration_ms: 0.754858
+  type: 'test'
+  ...
+# Subtest: speech language selector retains all 39 supported language identifiers
+ok 21 - speech language selector retains all 39 supported language identifiers
+  ---
+  duration_ms: 0.336789
+  type: 'test'
+  ...
+# Subtest: audio recording uses permission-gated microphone and MediaRecorder
+ok 22 - audio recording uses permission-gated microphone and MediaRecorder
+  ---
+  duration_ms: 0.111525
+  type: 'test'
+  ...
+# Subtest: video recording uses permission-gated camera and MediaRecorder
+ok 23 - video recording uses permission-gated camera and MediaRecorder
+  ---
+  duration_ms: 0.10803
+  type: 'test'
+  ...
+# Subtest: image tool imports local images and exports PNG
+ok 24 - image tool imports local images and exports PNG
+  ---
+  duration_ms: 0.227767
+  type: 'test'
+  ...
+# Subtest: recording tracks are stopped when capture ends or page unloads
+ok 25 - recording tracks are stopped when capture ends or page unloads
+  ---
+  duration_ms: 0.095611
+  type: 'test'
+  ...
+# Subtest: service worker caches media studio script under a new cache version
+ok 26 - service worker caches media studio script under a new cache version
+  ---
+  duration_ms: 0.139417
+  type: 'test'
+  ...
+# Subtest: media module is loaded by the main app
+ok 27 - media module is loaded by the main app
+  ---
+  duration_ms: 0.160809
+  type: 'test'
+  ...
+# Subtest: visible build metadata consistently identifies 0.10.10
+ok 28 - visible build metadata consistently identifies 0.10.10
+  ---
+  duration_ms: 0.757772
+  type: 'test'
+  ...
+# Subtest: navigation tabs are explicit buttons
+ok 29 - navigation tabs are explicit buttons
+  ---
+  duration_ms: 0.307135
+  type: 'test'
+  ...
+# Subtest: direct-file mode explains secure-context limitations without disabling chat
+ok 30 - direct-file mode explains secure-context limitations without disabling chat
+  ---
+  duration_ms: 0.105406
+  type: 'test'
+  ...
+# Subtest: mobile controls have accessible touch sizing and focus visibility
+ok 31 - mobile controls have accessible touch sizing and focus visibility
+  ---
+  duration_ms: 0.105506
+  type: 'test'
+  ...
+# Subtest: service worker uses the 0.10.10 cache and retires 0.10.9
+ok 32 - service worker uses the 0.10.10 cache and retires 0.10.9
+  ---
+  duration_ms: 0.186536
+  type: 'test'
+  ...
+# Subtest: mobile build exposes Android PWA install guidance and event handling
+ok 33 - mobile build exposes Android PWA install guidance and event handling
+  ---
+  duration_ms: 1.367094
+  type: 'test'
+  ...
+# Subtest: mobile build uses a new service worker cache and cleans the previous cache
+ok 34 - mobile build uses a new service worker cache and cleans the previous cache
+  ---
+  duration_ms: 0.166537
+  type: 'test'
+  ...
+# Subtest: music studio exposes prompt, duration, instrumental toggle, preview and download
+ok 35 - music studio exposes prompt, duration, instrumental toggle, preview and download
+  ---
+  duration_ms: 0.874435
+  type: 'test'
+  ...
+# Subtest: music endpoint uses server-side Stability key and Stable Audio API
+ok 36 - music endpoint uses server-side Stability key and Stable Audio API
+  ---
+  duration_ms: 0.308737
+  type: 'test'
+  ...
+# Subtest: health endpoint reports music readiness independently from image and speech
+ok 37 - health endpoint reports music readiness independently from image and speech
+  ---
+  duration_ms: 0.314366
+  type: 'test'
+  ...
+# Subtest: creates a stable-shape reminder notification with task priority and unread state
+ok 38 - creates a stable-shape reminder notification with task priority and unread state
+  ---
+  duration_ms: 1.464689
+  type: 'test'
+  ...
+# Subtest: defaults invalid notification priority to medium
+ok 39 - defaults invalid notification priority to medium
+  ---
+  duration_ms: 0.202209
+  type: 'test'
+  ...
+# Subtest: notification filters support all, unread and priority
+ok 40 - notification filters support all, unread and priority
+  ---
+  duration_ms: 1.031667
+  type: 'test'
+  ...
+# Subtest: project search matches name and description case-insensitively
+ok 41 - project search matches name and description case-insensitively
+  ---
+  duration_ms: 0.975605
+  type: 'test'
+  ...
+# Subtest: project statistics count only notes linked by stable project ID
+ok 42 - project statistics count only notes linked by stable project ID
+  ---
+  duration_ms: 0.678795
+  type: 'test'
+  ...
+# Subtest: renaming a project updates denormalized names without changing stable links
+ok 43 - renaming a project updates denormalized names without changing stable links
+  ---
+  duration_ms: 0.1825
+  type: 'test'
+  ...
+# Subtest: proxy enforces configured origin and JSON content type
+ok 44 - proxy enforces configured origin and JSON content type
+  ---
+  duration_ms: 121.1184
+  type: 'test'
+  ...
+# Stored data could not be read: SyntaxError: Expected property name or '}' in JSON at position 1 (line 1 column 2)
+#     at JSON.parse (<anonymous>)
+#     at Object.readState (evalmachine.<anonymous>:17:136)
+#     at TestContext.<anonymous> [90m(/mnt/data/MR_AI_0_10_10_internal/[39mtests/storage-regression.test.cjs:31:24[90m)[39m
+# [90m    at Test.runInAsyncScope (node:async_hooks:214:14)[39m
+# [90m    at Test.run (node:internal/test_runner/test:1047:25)[39m
+# [90m    at Test.processPendingSubtests (node:internal/test_runner/test:744:18)[39m
+# [90m    at Test.postRun (node:internal/test_runner/test:1173:19)[39m
+# [90m    at Test.run (node:internal/test_runner/test:1101:12)[39m
+# [90m    at async Test.processPendingSubtests (node:internal/test_runner/test:744:7)[39m
+# Subtest: merges v0.6 and legacy v0.5 records without losing metadata
+ok 45 - merges v0.6 and legacy v0.5 records without losing metadata
+  ---
+  duration_ms: 3.08579
+  type: 'test'
+  ...
+# Subtest: deduplicates identical records during migration
+ok 46 - deduplicates identical records during migration
+  ---
+  duration_ms: 0.83683
+  type: 'test'
+  ...
+# Subtest: ignores malformed legacy JSON while retaining valid primary data
+ok 47 - ignores malformed legacy JSON while retaining valid primary data
+  ---
+  duration_ms: 1.574252
+  type: 'test'
+  ...
+# Subtest: normalizes missing collections without discarding extra fields
+ok 48 - normalizes missing collections without discarding extra fields
+  ---
+  duration_ms: 1.244062
+  type: 'test'
+  ...
+# Subtest: backup merge preserves unknown fields from both sources and current values win
+ok 49 - backup merge preserves unknown fields from both sources and current values win
+  ---
+  duration_ms: 0.791271
+  type: 'test'
+  ...
+# Subtest: backup merge does not mutate either input object
+ok 50 - backup merge does not mutate either input object
+  ---
+  duration_ms: 0.565768
+  type: 'test'
+  ...
+# Subtest: preserves project tasks through normalization and backup merge
+ok 51 - preserves project tasks through normalization and backup merge
+  ---
+  duration_ms: 0.802899
+  type: 'test'
+  ...
+# Subtest: memory search matches title and body case-insensitively and normalizes Unicode
+ok 52 - memory search matches title and body case-insensitively and normalizes Unicode
+  ---
+  duration_ms: 0.854546
+  type: 'test'
+  ...
+# Subtest: memory search includes category and linked project, and category filter is exact
+ok 53 - memory search includes category and linked project, and category filter is exact
+  ---
+  duration_ms: 0.946692
+  type: 'test'
+  ...
+# Subtest: assigns stable IDs to legacy projects and notes and migrates unambiguous project links
+ok 54 - assigns stable IDs to legacy projects and notes and migrates unambiguous project links
+  ---
+  duration_ms: 1.010457
+  type: 'test'
+  ...
+# Subtest: does not guess a project link when legacy project names are ambiguous
+ok 55 - does not guess a project link when legacy project names are ambiguous
+  ---
+  duration_ms: 0.68199
+  type: 'test'
+  ...
+# Subtest: notification history survives normalization and backup merge
+ok 56 - notification history survives normalization and backup merge
+  ---
+  duration_ms: 0.775068
+  type: 'test'
+  ...
+# Subtest: overdue excludes completed tasks and tasks without due dates
+ok 57 - overdue excludes completed tasks and tasks without due dates
+  ---
+  duration_ms: 0.718434
+  type: 'test'
+  ...
+# Subtest: task filters return the expected task groups
+ok 58 - task filters return the expected task groups
+  ---
+  duration_ms: 1.463187
+  type: 'test'
+  ...
+# Subtest: task statistics count completion and overdue records
+ok 59 - task statistics count completion and overdue records
+  ---
+  duration_ms: 0.275067
+  type: 'test'
+  ...
+# Subtest: local date key uses the device calendar date rather than UTC date
+ok 60 - local date key uses the device calendar date rather than UTC date
+  ---
+  duration_ms: 0.281898
+  type: 'test'
+  ...
+# Subtest: due reminders include only due, pending, not-yet-notified tasks
+ok 61 - due reminders include only due, pending, not-yet-notified tasks
+  ---
+  duration_ms: 0.22942
+  type: 'test'
+  ...
+1..61
+# tests 61
+# suites 0
+# pass 61
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 934.617151

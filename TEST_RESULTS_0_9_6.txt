@@ -1,0 +1,86 @@
+TAP version 13
+# Subtest: proxy reports unconfigured state and rejects model requests without a secret
+ok 1 - proxy reports unconfigured state and rejects model requests without a secret
+  ---
+  duration_ms: 123.482647
+  type: 'test'
+  ...
+# Subtest: proxy enforces configured origin and JSON content type
+ok 2 - proxy enforces configured origin and JSON content type
+  ---
+  duration_ms: 123.854442
+  type: 'test'
+  ...
+# Stored data could not be read: SyntaxError: Expected property name or '}' in JSON at position 1 (line 1 column 2)
+#     at JSON.parse (<anonymous>)
+#     at Object.readState (evalmachine.<anonymous>:7:136)
+#     at TestContext.<anonymous> (/mnt/data/mr095_work/mr092/M.R_AI_0_9_2/tests/storage-regression.test.cjs:31:24)
+#     at Test.runInAsyncScope (node:async_hooks:214:14)
+#     at Test.run (node:internal/test_runner/test:1047:25)
+#     at Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+#     at Test.postRun (node:internal/test_runner/test:1173:19)
+#     at Test.run (node:internal/test_runner/test:1101:12)
+#     at async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+# Subtest: merges v0.6 and legacy v0.5 records without losing metadata
+ok 3 - merges v0.6 and legacy v0.5 records without losing metadata
+  ---
+  duration_ms: 2.334138
+  type: 'test'
+  ...
+# Subtest: deduplicates identical records during migration
+ok 4 - deduplicates identical records during migration
+  ---
+  duration_ms: 1.935309
+  type: 'test'
+  ...
+# Subtest: ignores malformed legacy JSON while retaining valid primary data
+ok 5 - ignores malformed legacy JSON while retaining valid primary data
+  ---
+  duration_ms: 1.677213
+  type: 'test'
+  ...
+# Subtest: normalizes missing collections without discarding extra fields
+ok 6 - normalizes missing collections without discarding extra fields
+  ---
+  duration_ms: 1.216963
+  type: 'test'
+  ...
+# Subtest: backup merge preserves unknown fields from both sources and current values win
+ok 7 - backup merge preserves unknown fields from both sources and current values win
+  ---
+  duration_ms: 1.203387
+  type: 'test'
+  ...
+# Subtest: backup merge does not mutate either input object
+ok 8 - backup merge does not mutate either input object
+  ---
+  duration_ms: 0.74079
+  type: 'test'
+  ...
+# Subtest: preserves project tasks through normalization and backup merge
+ok 9 - preserves project tasks through normalization and backup merge
+  ---
+  duration_ms: 0.712324
+  type: 'test'
+  ...
+# Subtest: memory search matches title and body case-insensitively and normalizes Unicode
+ok 10 - memory search matches title and body case-insensitively and normalizes Unicode
+  ---
+  duration_ms: 0.96826
+  type: 'test'
+  ...
+# Subtest: memory search includes category and linked project, and category filter is exact
+ok 11 - memory search includes category and linked project, and category filter is exact
+  ---
+  duration_ms: 2.351973
+  type: 'test'
+  ...
+1..11
+# tests 11
+# suites 0
+# pass 11
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 425.582751

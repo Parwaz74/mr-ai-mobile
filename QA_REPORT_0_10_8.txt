@@ -1,0 +1,19 @@
+M.R AI 0.10.8 — Internal QA Report
+
+Scope:
+- Added independent chat conversations with a scrollable conversation list.
+- Added New conversation, switch, rename and delete actions.
+- Each conversation stores its own message history and timestamps.
+- Existing flat legacy message history migrates into one preserved conversation.
+- Conversation records are included in JSON backup merge/import.
+- Updated service-worker cache to v0.10.8.
+
+Validation:
+- JavaScript syntax checks: passed.
+- Node test suite: 54 passed, 0 failed.
+- Tests cover conversation UI, migration, isolated history, management actions and backup merge.
+
+Limitations:
+- Chat history remains local to this browser/device; no cloud synchronization is implemented.
+- This update does not add an independent language model.
+- GitHub Pages has not been updated by this package creation.

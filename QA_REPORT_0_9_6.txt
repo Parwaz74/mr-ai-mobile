@@ -1,0 +1,33 @@
+M.R AI 0.9.6 — Internal QA report
+
+Implemented in this increment:
+- Added optional memory categories.
+- Added category filtering in the memory view.
+- Memory search now also checks category and linked project name.
+- Added optional links from notes to existing active or archived projects.
+- Added editing of note title, body, category and linked project.
+- Existing notes without category/project metadata remain readable and display as uncategorized / no project.
+- Existing project and archive records are not rewritten by this feature.
+- Backup export and merge metadata now use schemaVersion 9; existing records and unknown fields remain preserved.
+- English, Persian and Arabic labels added for the new controls.
+
+Validation performed:
+- node --check app.js
+- node --check ai-client.js
+- node --check server.mjs
+- node --test tests/*.test.cjs: 11 tests passed.
+- Manifest JSON parse.
+- 39 configured language identifiers retained.
+- ZIP integrity check.
+
+Not tested / not complete:
+- Full browser interaction and Android device UI testing.
+- Cloud sync or multi-device persistence.
+- Full translation of all 39 interfaces.
+- Live independent language model connection (apiEnabled remains false).
+- Production voice, image, video or audio generation integrations.
+- Production authentication and distributed rate limiting.
+
+Known UI limitation:
+- Editing currently uses sequential browser prompt dialogs rather than an in-page editor.
+- Project links use project names; renaming a project is not yet supported.

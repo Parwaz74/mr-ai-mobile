@@ -1,0 +1,18 @@
+M.R AI 0.10.9 — Internal QA Report
+
+Changes:
+- Conversation create/select/rename/delete now use commitState rollback handling.
+- Legacy flat messages snapshot follows the active conversation while all separate histories remain in conversations[].
+- JSON backup schema version aligned to 14; filename updated to v0109.
+- Service worker cache bumped to v0.10.9 and prior v0.10.8 cache is retired.
+
+Validation performed in this environment:
+- Node JavaScript syntax check: passed.
+- Full Node test suite: see TEST_RESULTS_0_10_9.txt.
+
+Not validated here:
+- Actual Android Chrome interaction and visual layout.
+- Live GitHub Pages deployment.
+- Cloud synchronization or independent language-model inference.
+
+Status: internal review candidate; not public v1.0.

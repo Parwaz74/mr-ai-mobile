@@ -1,0 +1,18 @@
+M.R AI 0.9.2 — Internal QA report
+
+Passed checks:
+- node --check app.js
+- node --check server.mjs
+- node --test tests/*.test.cjs: 8/8 tests passed
+- Proxy rejects unapproved Origin when ALLOWED_ORIGIN is configured.
+- Proxy rejects non-JSON POST requests.
+- Proxy returns 503 when provider secret is not configured.
+- Existing storage regression tests: 6/6 passed.
+- ZIP structure and required assets/icons verified separately.
+
+Limitations:
+- No real provider API key or live upstream model call was tested.
+- Rate limiting is in-memory per process/IP and is not a substitute for production gateway controls.
+- No Android device/browser microphone test was performed.
+- Complete UI localization for all 39 languages is not implemented.
+- This is an internal review candidate, not a release build.

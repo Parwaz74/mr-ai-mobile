@@ -1,0 +1,7 @@
+M.R AI 0.10.1 — Internal QA
+
+Implemented: in-app activity/notification center for task reminders; persistent notification history in local browser storage; read/unread state; mark-all-read action; filters by unread/all and low/medium/high priority; backup normalization and merge support for notifications; English, Persian and Arabic labels; Service Worker cache version bumped.
+
+Automated tests: 25 passed, 0 failed. Syntax checks: app.js, ai-client.js, server.mjs passed. Manifest JSON parse passed.
+
+Limitations: local browser storage only; no cloud sync; browser/OS notifications are optional and may not run when the page is suspended or closed; no native Android scheduling or push server; no Android device test; no live LLM provider test; translations beyond English/Persian/Arabic remain incomplete.

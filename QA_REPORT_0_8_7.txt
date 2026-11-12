@@ -1,0 +1,20 @@
+M.R AI — Internal review candidate 0.8.7
+
+Scope of this increment:
+- Storage migration now preserves forward-compatible top-level metadata from the primary v0.6 store while merging record collections from both v0.6 and legacy v0.5 stores.
+- Added repeatable Node.js regression tests for migration, duplicate handling, malformed legacy JSON, and normalization.
+
+Verified locally:
+- JavaScript syntax check (node --check app.js).
+- Four storage regression tests (node --test tests/storage-regression.test.cjs).
+- Manifest JSON parse.
+- Required HTML element IDs are unique.
+- Local asset/icon references exist.
+- ZIP integrity.
+
+Not verified in this environment:
+- Real Android browser/PWA installation and offline behavior.
+- Full translations for all 39 listed languages (only English, Persian and Arabic dictionaries exist in this candidate).
+- A connected independent language model, two-way voice assistant, or actual image/video/audio generation engines. These are not implemented.
+
+This is an internal review candidate, not a production release. Do not overwrite the live GitHub repository until a complete backup, browser testing, and user-approved deployment are available.

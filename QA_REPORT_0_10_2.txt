@@ -1,0 +1,17 @@
+M.R AI 0.10.2 — INTERNAL REVIEW
+
+Primary change: functional browser-side media workbench.
+1) Multilingual text-to-speech playback using browser SpeechSynthesis; 39 language identifiers are selectable. Voice availability is device/browser-dependent. No TTS audio-file export.
+2) Microphone recording via permission-gated getUserMedia + MediaRecorder; WebM download.
+3) Camera/microphone video recording via permission-gated getUserMedia + MediaRecorder; WebM download.
+4) Local image import, canvas resize/brightness adjustment, PNG export.
+5) Capture tracks are stopped after recording and on page unload.
+6) Service worker cache version bumped and media-studio.js added to core cache.
+
+Automated validation: 33/33 Node tests passed; node --check app.js, media-studio.js, server.mjs passed; manifest JSON valid; ZIP integrity checked.
+
+Not implemented: AI image generation, generative video, music generation, singing voice generation, downloadable TTS audio, professional multitrack editing, complete 39-language UI translations, live LLM provider connection, cloud sync.
+
+Device validation: not performed. Browser permission, HTTPS, MediaRecorder codec support and actual microphone/camera operation must be tested on Android before release.
+
+Status: internal review candidate only; not an Android APK or public release.

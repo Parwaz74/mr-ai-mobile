@@ -1,0 +1,9 @@
+M.R AI 0.10.3 — INTERNAL REVIEW
+
+Scope: server-side provider integration for AI image generation and text-to-speech MP3.
+
+Implemented: POST /api/media/image proxies a configured OpenAI-compatible image endpoint; POST /api/media/speech proxies speech generation and returns audio/mpeg. Provider credentials remain server-side. Browser UI provides generation, preview and download controls. Input limits, timeout, rate limiting, origin policy and no-store responses reuse the existing proxy controls.
+
+Not implemented: AI music generation, AI video generation, voice cloning, image editing/inpainting, timeline editing, Android-native background jobs, cloud asset library, provider live verification.
+
+Live generation was NOT tested because no provider API key or hosted backend is configured in this environment. A server deployment and valid billing-enabled provider account are required before the new controls can generate files.

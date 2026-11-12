@@ -1,0 +1,35 @@
+M.R AI 0.9.8 — Internal QA report
+
+Implemented:
+- Search active and archived projects by name and description.
+- Edit project name and description with an in-page editor.
+- Preserve stable project IDs when renaming.
+- Update denormalized projectName fields only for notes linked to the renamed project ID.
+- Show linked memory-note count and completed/total task counts for each project.
+- New projects initialize tasks as an empty array and include updatedAt.
+- Backup schema advanced to 11; import continues to accept legacy backup structures.
+- Service worker cache advanced to 0.9.8.
+- Existing assets/, icons/, localStorage keys and existing project/memory records retained.
+
+Validation performed:
+- node --check app.js — passed.
+- node --check ai-client.js — passed.
+- node --check server.mjs — passed.
+- node --test tests/*.test.cjs — 16 tests passed.
+- Manifest JSON parse — passed.
+- ZIP integrity — passed.
+- Exactly 39 configured language identifiers retained.
+- Project search, stable-ID note counts, and rename-link behavior covered by dedicated tests.
+
+Not tested / not complete:
+- Full browser end-to-end interaction and Android device testing.
+- Cloud sync / multi-device persistence.
+- Full translation of all 39 interfaces.
+- Live independent language model connection (apiEnabled remains false).
+- Production image, video, or audio generation.
+- Production authentication and distributed rate limiting.
+
+Data safety:
+- No user data is deleted by this increment.
+- Project rename does not change project IDs; linked notes remain associated.
+- Archive and restore continue to preserve project IDs and tasks.

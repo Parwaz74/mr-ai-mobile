@@ -1,0 +1,25 @@
+M.R AI — Internal review candidate 0.8.9
+
+Implemented in this increment:
+- Added optional browser adapter (ai-client.js) for a same-origin /api/chat endpoint.
+- Added Node.js 20+ OpenAI-compatible server-side proxy (server.mjs).
+- Provider credentials are read only from server environment; no key is embedded in client assets.
+- Remote adapter is disabled by default in config.js; existing deterministic local engine remains the fallback.
+- Added configuration and deployment notes; GitHub Pages alone cannot run the Node proxy.
+- Service worker cache version and precache list updated for new client modules.
+
+Verified locally:
+- node --check app.js, ai-client.js, server.mjs, sw.js
+- node --test tests/*.test.cjs: 7 tests passed (6 storage regressions + 1 proxy configuration test)
+- Proxy health endpoint reports unconfigured state; chat endpoint safely returns 503 without a server secret.
+- No provider key or account credentials included.
+
+Not verified / not implemented:
+- No live model provider account, API key, or deployed backend is configured.
+- Remote model inference has not been tested against a real provider.
+- Complete translations for all 39 languages remain incomplete (full dictionaries exist only for en/fa/ar).
+- Two-way voice assistant is not implemented.
+- Real image/video/audio generation engines are not connected.
+- Android device/PWA install and offline testing have not been performed.
+
+Internal review candidate only. Do not deploy over the live repository until a backend host is configured, a real-provider test and Android testing pass, and the user approves deployment.

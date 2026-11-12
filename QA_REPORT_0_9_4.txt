@@ -1,0 +1,24 @@
+M.R AI 0.9.4 — Internal QA report
+
+Implemented in this step:
+- Project-scoped task lists for active projects.
+- Add task, toggle pending/completed, and delete task actions.
+- Tasks remain embedded in project records and therefore travel with archive/restore and JSON backup/merge.
+- Legacy project records without a tasks array remain readable.
+- English, Persian and Arabic labels added for task controls.
+
+Validation performed:
+- JavaScript syntax checks (app.js, ai-client.js, server.mjs).
+- Existing automated test suite.
+- ZIP integrity check.
+- Manifest JSON parse.
+- Static inspection of task handlers and legacy project rendering path.
+
+Not tested / not complete:
+- Full browser interaction / Android device UI test not available in this environment.
+- Cloud sync and multi-device persistence are not implemented.
+- Complete 39-language translations are not present.
+- No live LLM provider call; apiEnabled remains false.
+- Browser-native voice support is device/browser-dependent.
+- Real image/video/audio generation providers are not connected.
+- Production authentication and distributed rate limiting are not implemented.
