@@ -1,0 +1,4 @@
+{
+  "_README": "Replace this file with a ComfyUI API-format workflow for the video model you installed. Put placeholders in the relevant node inputs: {{PROMPT}}, {{NEGATIVE_PROMPT}}, {{SEED}}, {{WIDTH}}, {{HEIGHT}}, {{FRAMES}}, {{FPS}}.",
+  "_NOT_A_RUNNABLE_WORKFLOW": true
+}
