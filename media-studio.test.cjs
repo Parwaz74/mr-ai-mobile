@@ -1,0 +1,10 @@
+const test=require('node:test');const assert=require('node:assert/strict');const fs=require('node:fs');const path=require('node:path');
+const root=path.join(__dirname,'..');const html=fs.readFileSync(path.join(root,'index.html'),'utf8');const js=fs.readFileSync(path.join(root,'media-studio.js'),'utf8');const sw=fs.readFileSync(path.join(root,'sw.js'),'utf8');
+test('media workbench exposes text-to-speech controls',()=>{for(const id of ['ttsText','ttsLanguage','ttsSpeak','ttsStop'])assert.match(html,new RegExp(`id="${id}"`));assert.match(js,/SpeechSynthesisUtterance/);});
+test('speech language selector retains all 39 supported language identifiers',()=>{const block=js.match(/const names=\[(.*?)\];/s);assert.ok(block);const count=(block[1].match(/\['[a-z]{2}'/g)||[]).length;assert.equal(count,39);assert.ok(!block[1].includes("['he'"));});
+test('audio recording uses permission-gated microphone and MediaRecorder',()=>{assert.match(js,/getUserMedia\(\{audio:true\}\)/);assert.match(js,/new MediaRecorder\(audioStream\)/);assert.match(js,/audio\/webm/);});
+test('video recording uses permission-gated camera and MediaRecorder',()=>{assert.match(js,/getUserMedia\(\{video:/);assert.match(js,/new MediaRecorder\(videoStream\)/);assert.match(js,/video\/webm/);});
+test('image tool imports local images and exports PNG',()=>{assert.match(html,/accept="image\/\*"/);assert.match(js,/createObjectURL\(file\)/);assert.match(js,/toBlob\(blob=>[\s\S]*?'image\/png'/);});
+test('recording tracks are stopped when capture ends or page unloads',()=>{assert.match(js,/audioStream\?\.getTracks\(\)\.forEach/);assert.match(js,/videoStream\?\.getTracks\(\)\.forEach/);});
+test('service worker caches media studio script under a new cache version',()=>{assert.match(sw,/mr-ai-mobile-v0-10-8/);assert.match(sw,/\.\/media-studio\.js/);});
+test('media module is loaded by the main app',()=>{assert.match(html,/media-studio\.js/);});
