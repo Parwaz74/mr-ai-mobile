@@ -2,7 +2,7 @@ const test = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const vm = require('node:vm');
-const source = fs.readFileSync(new URL('../app.js', `file://${__filename}`), 'utf8');
+const source = fs.readFileSync(new URL('./app.js', `file://${__filename}`), 'utf8');
 const start = source.indexOf("const KEY='mr_ai_v06_store'");
 const end = source.indexOf('let state=readState()', start);
 assert.ok(start >= 0 && end > start, 'storage core section must exist');

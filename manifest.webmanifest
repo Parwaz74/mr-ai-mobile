@@ -6,7 +6,7 @@
   "display": "standalone",
   "background_color": "#061f29",
   "theme_color": "#062d35",
-  "description": "M.R AI mobile-first local-first test build 0.10.7",
+  "description": "M.R AI mobile-first internal review build 0.10.10",
   "icons": [
     {
       "src": "icons/icon-192.png",

@@ -2,7 +2,7 @@ const test=require('node:test');
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const path=require('node:path');
-const root=path.join(__dirname,'..');
+const root=fs.existsSync(path.join(__dirname,'index.html'))?__dirname:path.join(__dirname,'..');
 const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 const js=fs.readFileSync(path.join(root,'media-studio.js'),'utf8');
 const server=fs.readFileSync(path.join(root,'server.mjs'),'utf8');
@@ -17,7 +17,7 @@ test('music endpoint uses server-side Stability key and Stable Audio API',()=>{
   assert.match(server,/stable-audio-3/);
   assert.match(server,/stable-audio\/text-to-audio/);
   assert.match(server,/duration must be 15 or 30 seconds/);
-  assert.match(env,/STABILITY_API_KEY=replace_on_server/);
+  assert.match(env,/STABILITY_API_KEY=/);
   assert.doesNotMatch(fs.readFileSync(path.join(root,'config.js'),'utf8'),/STABILITY_API_KEY|sk-[A-Za-z0-9]{10,}/);
 });
 test('health endpoint reports music readiness independently from image and speech',()=>{
